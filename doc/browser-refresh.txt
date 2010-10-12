@@ -1,0 +1,69 @@
+*browser-refresh.txt*
+
+Author:
+  Matthew Kitt <mk dot kitt at gmail dot com>
+
+This plugin is licensed under the terms of the MIT License.  Please see
+browser-refresh.vim for the license in its entirety.
+
+==============================================================================
+Browser Refresh                         *browser-refresh*
+
+1. Introduction                         |browser-refresh-intro|
+2. Dependencies                         |browser-refresh-dependencies|
+3. Usage                                |browser-refresh-usage|
+4. Options                              |browser-refresh-options|
+    Default Browser                     |browser-refresh-defaultbrowser|
+    Return Focus                        |browser-refresh-returnfocus|
+5. Recommendation                       |browser-refresh-recommendation|
+==============================================================================
+1. Introduction                         *browser-refresh-intro*
+
+Browser Refresh is based off of the TextMate snippet "refresh current running
+browser". In other words it allows you to call a command and reload the front
+window of your current browser. It also contains the option to auto
+return focus to vim after the browser has done it's thing.
+
+In it's current implementation, it only works from within MacVim. Stay tuned
+for updates to other vim implementations.
+==============================================================================
+2. Dependencies                         *browser-refresh-dependencies*
+
+Browser Refresh requires the following:
+- MacVim version 7.0 or above
+- Google Chrome, Safari or Firefox (Mac)
+==============================================================================
+3. Usage                                *browser-refresh-usage*
+
+Send vim the command :RRB (Refresh Running Browser) and it will reload the
+curruent front window of the running browser. If set, after the reload in the
+browser window has fired, it will return focus back to vim.
+==============================================================================
+4. Options                              *browser-refresh-options*
+
+Browser Refresh comes configured with a few global variables which can be
+overridden within you .vimrc file.
+
+g:RefreshRunningBrowserDefault          *browser-refresh-defaultbrowser*
+  Generally you set this to your default browser within the OS to speed
+  up the conditional logic. By default it is set to "all" The following
+  variables are currently supported:
+
+    let g:RefreshRunningBrowserDefault = 'all' <= default
+    let g:RefreshRunningBrowserDefault = 'chrome'
+    let g:RefreshRunningBrowserDefault = 'safari'
+    let g:RefreshRunningBrowserDefault = 'firefox'
+
+g:RefreshRunningBrowserReturnFocus      *browser-refresh-returnfocus*
+  Enables or disables the OS to return focus to vim after the browser has
+  finished reloading the current page. By default it is set to "1" (true).
+  To change this so the browser maintains focus, set in your .vimrc file:
+
+    let g:RefreshRunningBrowserReturnFocus = 0
+==============================================================================
+5. Recommendation                       *browser-refresh-recommendation*
+
+Probably a good idea to map this to a leader key.
+
+    map <silent><leader>r :RRB<CR>
+==============================================================================
