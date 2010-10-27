@@ -24,7 +24,7 @@ browser". In other words it allows you to call a command and reload the front
 window of your current browser. It also contains the option to auto
 return focus to vim after the browser has done it's thing.
 
-In it's current implementation, it only works from within MacVim. Stay tuned
+In it's current implementation, it only been tested within MacVim. Stay tuned
 for updates to other vim implementations.
 ==============================================================================
 2. Dependencies                         *browser-refresh-dependencies*
@@ -67,3 +67,4 @@ Probably a good idea to map this to a leader key.
 
     map <silent><leader>r :RRB<CR>
 ==============================================================================
+vim:tw=78:ts=8:ft=help:norl:

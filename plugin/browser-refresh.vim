@@ -27,6 +27,19 @@
 " FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 " OTHER DEALINGS IN THE SOFTWARE
 
+" Bail quickly when:
+" - this plugin was already loaded or disabled
+" - when 'compatible' is set
+if (exists("g:loaded_browserrefresh") && g:loaded_browserrefresh) || &cp
+  finish
+endif
+let g:loaded_browserrefresh = 1
+
+" Scoot if not in gui
+if !has("gui_running")
+  finish
+endif
+
 " Set to all if a default browser isn't set
 if !exists("g:RefreshRunningBrowserDefault")
   let g:RefreshRunningBrowserDefault = 'all'
