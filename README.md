@@ -8,7 +8,7 @@ return focus to vim after the browser has done it's thing.
 In it's current implementation, it only works from within MacVim. Stay tuned
 for updates to other vim implementations.
 
-For more information on the plugin: `:help browser-refresh` within vim or take a look at the [help files](http://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt) on github.
+For more information on the plugin: `:h browser-refresh` within vim or take a look at the [help files](http://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt) on github.
 
 
 ## Install
@@ -34,7 +34,7 @@ Browser Refresh requires the following:
 Inspired by:
 
 - The TextMate snippet in the HTML bundle
-- My burning desire to never touch my mouse again
+- A burning desire to never touch my mouse again
 
 
 ## Contributing
