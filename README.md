@@ -5,8 +5,7 @@ browser". In other words it allows you to call a command and reload the front
 window of your current browser. It also contains the option to auto
 return focus to vim after the browser has done it's thing.
 
-In it's current implementation, it only works from within MacVim. Stay tuned
-for updates to other vim implementations.
+In it's current implementation, it only works from within MacVim. It seems to work from within Terminal Vim, but there are some issues with screen redrawing. Stay tuned for updates to other vim implementations.
 
 For more information on the plugin: `:h browser-refresh` within vim or take a look at the [help files](http://github.com/mkitt/browser-refresh.vim/blob/master/doc/browser-refresh.txt) on github.
 
@@ -20,7 +19,8 @@ Download, fork, clone, or use it as a submodule within your .vim directory.
 
 Browser Refresh requires the following:
 
-- MacVim version 7.0 or above
+- Vim version 7.0 or above
+- MacVim is recommended
 - Google Chrome, Safari or Firefox (Mac)
 
 ## Todo

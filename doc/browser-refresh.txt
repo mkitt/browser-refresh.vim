@@ -24,13 +24,15 @@ browser". In other words it allows you to call a command and reload the front
 window of your current browser. It also contains the option to auto
 return focus to vim after the browser has done it's thing.
 
-In it's current implementation, it only been tested within MacVim. Stay tuned
-for updates to other vim implementations.
+In it's current implementation, it only been tested within MacVim. It works
+from within Terminal Vim, but there are a few issues with screen redrawing. 
+Stay tuned for updates to other vim implementations.
 ==============================================================================
 2. Dependencies                         *browser-refresh-dependencies*
 
 Browser Refresh requires the following:
-- MacVim version 7.0 or above
+- Vim version 7.0 or above
+- MacVim is recommended
 - Google Chrome, Safari or Firefox (Mac)
 ==============================================================================
 3. Usage                                *browser-refresh-usage*

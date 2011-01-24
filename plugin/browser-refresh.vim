@@ -35,8 +35,8 @@ if (exists("g:loaded_browserrefresh") && g:loaded_browserrefresh) || &cp
 endif
 let g:loaded_browserrefresh = 1
 
-" Scoot if not in gui
-if !has("gui_running")
+" Scoot if not in mac
+if !has("mac")
   finish
 endif
 
