@@ -54,14 +54,17 @@ function! RefreshRunningBrowser()
 
   if (g:RefreshRunningBrowserDefault == 'chrome' || g:RefreshRunningBrowserDefault == 'all')
     silent :!ps -xc|grep -sq Chrome && osascript -e 'tell app "Google Chrome"' -e 'activate' -e 'tell app "System Events" to keystroke "r" using {command down}' -e 'end tell'
+    redraw!
   endif
 
   if (g:RefreshRunningBrowserDefault == 'safari' || g:RefreshRunningBrowserDefault == 'all')
     silent :!ps -xc|grep -sq Safari && osascript -e 'tell app "Safari"' -e 'activate' -e 'tell app "System Events" to keystroke "r" using {command down}' -e 'end tell'
+    redraw!
   endif
 
   if (g:RefreshRunningBrowserDefault == 'firefox' || g:RefreshRunningBrowserDefault == 'all')
     silent :!ps -xc|grep -sqi firefox && osascript -e 'tell app "Firefox"' -e 'activate' -e 'tell app "System Events" to keystroke "r" using {command down}' -e 'end tell'
+    redraw!
   endif
 
   if ((g:RefreshRunningBrowserReturnFocus == 1) && has('gui_macvim'))
