@@ -36,8 +36,13 @@ endif
 let g:loaded_browserrefresh = 1
 
 " Scoot if not in mac
-if !has("mac")
+if !has("unix")
   finish
+else
+  if !system('uname')=~'Darwin'
+    echo "Sorry, now it works only for mac"
+    finish
+  endif
 endif
 
 " Set to all if a default browser isn't set
